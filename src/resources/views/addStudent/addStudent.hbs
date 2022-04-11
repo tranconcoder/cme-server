@@ -1,0 +1,110 @@
+<link rel="stylesheet" href="/static/css/addStudent/addStudent.css" />
+
+<div id="add-student-page">
+	<form id="add-student-form" class="add-student-form">
+		<div class="title-container">
+			<h3>Biểu mẫu khảo sát thông tin học sinh</h3>
+			<p>Học sinh lớp {{classInfoName}}</p>
+		</div>
+
+		<div class="content-container">
+			<div class="left-slide">
+				<div class="thumb">
+					<img src="/static/img/fill-form.png" alt="" />
+				</div>
+			</div>
+
+			<div class="right-slide">
+				<div id="slide-container" {{#if hasPassword}}{{else}}style="transform: translateX(-50%);"{{/if}} class="list-slide">
+					<div class="slide-1">
+						{{#if hasPassword}}
+							<div class="password-input-container">
+								<span>Mật khẩu <i class="far fa-key"></i></span>
+
+								<p>Có thể lấy mật khẩu từ người tạo biểu mẫu này ({{authorName}}).</p>
+
+								<input
+									id="input-password"
+									type="password"
+									placeholder="Mật khẩu bảo mật..."
+								/>
+
+								<div class="error-container">
+									<span id="show-errors-message-password"></span>
+									<i class="far fa-times"></i>
+								</div>
+							</div>
+
+							<button id="next-slide-btn" class="next-slide-btn" type="button">
+								<p>Next</p>
+							</button>
+						{{/if}}
+					</div>
+
+					<div class="slide-2">
+						<div class="index-input-container input-wrapper">
+							<div class="input-container">
+								<input id="index-input" type="number" placeholder=" " />
+								<p><i class="far fa-list-ol"></i> Số thứ tự...</p>
+							</div>
+
+							<p class="error-container">
+								<span id="index-error-message"></span>
+								<i class="far fa-times"></i>
+							</p>
+						</div>
+
+						<div class="name-input-container input-wrapper">
+							<div class="input-container">
+								<input id="name-input" type="text" placeholder=" " />
+								<p><i class="far fa-user"></i> Họ và tên...</p>
+							</div>
+
+							<p class="error-container">
+								<span id="name-error-message"></span>
+								<i class="far fa-times"></i>
+							</p>
+						</div>
+
+						<div class="google-name-input-container input-wrapper">
+							<div class="input-container">
+								<input id="google-name-input" type="text" placeholder=" " />
+								<p><i class="far fa-user"></i> Tên tài khoản trong Google Meet...</p>
+							</div>
+
+							<p class="error-container">
+								<span id="google-name-error-message"></span>
+								<i class="far fa-times"></i>
+							</p>
+						</div>
+
+						<div class="email-input-container input-wrapper">
+							<div class="input-container">
+								<input id="email-input" type="email" placeholder=" " autocomplete="false" />
+								<p><i class="far fa-envelope"></i> Địa chỉ email...</p>
+							</div>
+
+							<p class="error-container">
+								<span id="email-error-message"></span>
+								<i class="far fa-times"></i>
+							</p>
+						</div>
+
+						<button id="submit-button" class="submit-btn">
+							<p>Submit</p>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<data id="hasPassword" value="{{toJson hasPassword}}"></data>
+<data id="googleId" value="{{googleId}}"></data>
+<data id="authorName" value="{{authorName}}"></data>
+<data id="classInfoName" value="{{classInfoName}}"></data>
+<data id="classInfoId" value="{{classInfoId}}"></data>
+<data id="onlineFormUrl" value="{{onlineFormUrl}}"></data>
+
+<script src="/static/js/addStudent/addStudent.js"></script>

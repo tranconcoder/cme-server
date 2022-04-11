@@ -1,0 +1,123 @@
+@import "../ALL_PACKAGE";
+
+#box-ctn {
+	@include size(800px, false);
+	@include maxSize(95%);
+	border-radius: 10px;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+	padding: 30px;
+	color: #fff;
+	overflow-y: auto;
+	background-color: #00002e;
+
+	& {
+		/* width */
+		&::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		/* Track */
+		&::-webkit-scrollbar-track {
+			background: #f1f1f1;
+		}
+
+		/* Handle */
+		&::-webkit-scrollbar-thumb {
+			background: rgb(181, 181, 181);
+		}
+
+		/* Handle on hover */
+		&::-webkit-scrollbar-thumb:hover {
+			background: #777;
+		}
+	}
+
+	.box-ctn__title {
+		@include size(100%, false);
+		font-weight: 600;
+		text-align: center;
+	}
+
+	.box-ctn__project-title {
+		margin-top: 40px;
+		font-size: 20px;
+		text-align: center;
+
+		span:last-child {
+			color: rgb(17, 255, 251);
+		}
+	}
+
+	.box-ctn__project-img {
+		@include size(100%, false);
+		@include flex(row, center, center);
+		margin-top: 40px;
+
+		img {
+			@include size(50%, false);
+		}
+	}
+
+	.box-ctn__go-to-meet-bar {
+		@include size(100%, false);
+		@include flex(row, center, center);
+		margin-top: 40px;
+
+		span {
+			@include size(20%, false);
+			text-align: right;
+		}
+
+		input {
+			@include size(50%, 40px);
+			@include marHonrizontal(20px);
+			border: 2px solid $primaryColor;
+			border-radius: 8px;
+			padding: 0 10px;
+			outline: none;
+			transition: ease 300ms;
+
+			&:focus {
+				border-color: $secondColor;
+			}
+		}
+
+		button {
+			@include size(20%, 40px);
+			@include btnFloatRight(#0000c4, #fff, 2px, ease 300ms);
+			font-weight: 600;
+			font-size: 14px;
+			border-radius: 4px;
+			transition: ease 300ms;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
+	.box-ctn__feature-bar {
+		@include size(100%, false);
+		@include flex(row, center, space-between);
+		margin-top: 50px;
+
+		a {
+			@include flex(row, center, center);
+			@include btnFloatRight($secondColor, #fff, 2px, ease 300ms);
+			font-size: 14px;
+			text-decoration: none;
+			padding: 10px 30px;
+			border-radius: 4px;
+
+			&:last-child {
+				@include btnFloatRight(#fff, $secondColor, 2px, ease 300ms);
+				font-weight: 500;
+			}
+
+			i {
+				margin-right: 6px;
+				font-size: 15px;
+			}
+		}
+	}
+}

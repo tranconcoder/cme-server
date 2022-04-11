@@ -1,0 +1,255 @@
+@import "../ALL_PACKAGE";
+
+@media screen and (max-width: 760px) {
+	#add-student-page {
+		> form.add-student-form {
+			> .content-container {
+				flex-direction: column !important;
+			}
+		}
+	}
+}
+
+@mixin error-container {
+	> .error-container {
+		@include flex(row-reverse, center, flex-end);
+		color: rgb(192, 0, 0);
+		border-radius: 6px;
+		background-color: rgba(255, 68, 0, 0.25);
+		margin-top: 4px;
+
+		> span {
+			font-size: 13px;
+
+			margin-block: 6px 7px;
+			transition: ease 300ms;
+
+			&:empty {
+				margin: 0;
+
+				& ~ i {
+					display: none;
+				}
+			}
+		}
+
+		> i {
+			font-size: 16px;
+			margin-inline: 10px;
+			transition: ease 500ms;
+		}
+	}
+}
+
+#add-student-page {
+	@include size(100vw, 100vh);
+	@include flex(row, center, center);
+	background-image: linear-gradient(45deg, #4f8fe4, #254fda);
+	overflow-y: auto;
+	padding: 10px;
+
+	> form.add-student-form {
+		@include size(1000px, 700px);
+		@include maxSize(100%);
+		@include flex(column);
+		padding: 30px;
+		border-radius: 16px;
+		background-color: #fff;
+		box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.4);
+		overflow-y: auto;
+
+		> .title-container {
+			@include size(100%, false);
+			text-align: center;
+			color: $textColorBlack;
+
+			> h3 {
+				font-weight: 600;
+				font-size: 20px;
+			}
+
+			> p {
+				font-size: 14px;
+				opacity: 0.7;
+			}
+		}
+
+		> .content-container {
+			@include size(100%, false);
+			@include flex(row, center, space-between);
+			flex: 1;
+			margin-top: 30px;
+
+			> .left-slide,
+			> .right-slide {
+				@include size(100%);
+				flex: 1;
+			}
+
+			> .left-slide {
+				@include flex(column, center, center);
+
+				> .thumb {
+					> img {
+						max-width: 100%;
+					}
+				}
+			}
+
+			> .right-slide {
+				margin-left: 20px;
+				overflow: hidden;
+
+				> .list-slide {
+					@include size(200%, 100%);
+					@include flex();
+					transition: ease 700ms;
+
+					> * {
+						@include size(100%);
+					}
+
+					> .slide-1 {
+						@include flex(column, flex-start, center);
+
+						> .password-input-container {
+							@include size(100%, false);
+							color: $primaryColor;
+							text-align: center;
+
+							> span {
+								display: block;
+
+								font-size: 20px;
+							}
+
+							> p {
+								font-size: 14px;
+								opacity: 0.8;
+								margin-top: 4px;
+							}
+
+							> input {
+								@include size(100%, 40px);
+								font-size: 14px;
+								outline: none;
+								border-radius: 8px;
+								border: 2px solid #ccc;
+								margin-top: 10px;
+								padding-inline: 10px;
+								transition: ease 300ms;
+
+								&:focus {
+									border-color: $primaryColor;
+									color: $primaryColor;
+								}
+
+								&:not(:placeholder-shown) {
+									letter-spacing: 4px;
+								}
+							}
+
+							@include error-container();
+						}
+
+						> .next-slide-btn {
+							@include size(100px, 38px);
+							@include setBtn($primaryColor, #fff, 2px, ease 300ms);
+							border-radius: 6px;
+							margin-top: 20px;
+							margin-left: auto;
+							cursor: pointer;
+
+							&:disabled {
+								filter: grayscale(1);
+								pointer-events: none;
+							}
+
+							> p {
+								font-weight: 600;
+							}
+						}
+					}
+
+					> .slide-2 {
+						padding: 40px 20px 20px;
+						overflow-y: auto;
+
+						> .input-wrapper {
+							margin-top: 36px;
+
+							> .input-container {
+								@include position(relative);
+
+								> input {
+									@include size(100%, 40px);
+									border-radius: 8px;
+									border: 2px solid #ccc;
+									outline: none;
+									padding-inline: 16px;
+									transition: ease 300ms;
+
+									&:not(:placeholder-shown) {
+										& + p {
+											transform: translateY(-44px);
+										}
+									}
+
+									&:focus {
+										border-color: $primaryColor;
+
+										& + p {
+											color: $primaryColorBlack;
+											transform: translateY(-44px);
+										}
+									}
+
+									&::-webkit-outer-spin-button,
+									&::-webkit-inner-spin-button {
+										-webkit-appearance: none;
+										margin: 0;
+									}
+
+									&[type="number"] {
+										-moz-appearance: textfield;
+									}
+								}
+
+								> p {
+									@include size(90%, false);
+									@include position(absolute, 50%, false, false, 17px);
+									@include webkitMaxLine(1);
+									transform: translateY(-50%);
+									color: #4f4f4f;
+									transition: ease 300ms;
+									pointer-events: none;
+									-webkit-user-select: none;
+
+									> i {
+										margin-right: 6px;
+									}
+								}
+							}
+
+							@include error-container();
+						}
+
+						> .submit-btn {
+							@include size(120px, 40px);
+							@include setBtn($primaryColor, #fff, 2px, ease 300ms);
+							border-radius: 8px;
+							display: block;
+							margin-top: 20px;
+							margin-left: auto;
+							cursor: pointer;
+
+							> p {
+								font-weight: 600;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

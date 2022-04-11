@@ -1,0 +1,127 @@
+ ›   Warning: heroku update available from 7.59.1 to 7.59.2.
+2022-01-13T01:33:47.197366+00:00 app[web.1]: > node ./src/index.js
+2022-01-13T01:33:47.197366+00:00 app[web.1]: 
+2022-01-13T01:33:49.920665+00:00 app[web.1]: Successful Connection!
+2022-01-13T01:33:49.922826+00:00 app[web.1]: Server is started! - http://localhost:25418
+2022-01-13T01:33:50.155717+00:00 heroku[web.1]: State changed from starting to up
+2022-01-13T01:35:07.134867+00:00 app[api]: Set TZ config vars by user tranvanconkg@gmail.com
+2022-01-13T01:35:07.134867+00:00 app[api]: Release v105 created by user tranvanconkg@gmail.com
+2022-01-13T01:35:07.427761+00:00 heroku[web.1]: Restarting
+2022-01-13T01:35:07.433428+00:00 heroku[web.1]: State changed from up to starting
+2022-01-13T01:35:09.035425+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2022-01-13T01:35:09.296704+00:00 heroku[web.1]: Process exited with status 143
+2022-01-13T01:35:11.063556+00:00 heroku[web.1]: Starting process with command `npm start`
+2022-01-13T01:35:12.260503+00:00 app[web.1]: 
+2022-01-13T01:35:12.260517+00:00 app[web.1]: > SERVER_CONS_Meeting_Education@1.0.0 start /app
+2022-01-13T01:35:12.260517+00:00 app[web.1]: > node ./src/index.js
+2022-01-13T01:35:12.260517+00:00 app[web.1]: 
+2022-01-13T01:35:15.047858+00:00 app[web.1]: Successful Connection!
+2022-01-13T01:35:15.050123+00:00 app[web.1]: Server is started! - http://localhost:8569
+2022-01-13T01:35:15.267014+00:00 heroku[web.1]: State changed from starting to up
+2022-01-13T01:35:32.680488+00:00 app[api]: Release v106 created by user tranvanconkg@gmail.com
+2022-01-13T01:35:32.680488+00:00 app[api]: Remove TZ config vars by user tranvanconkg@gmail.com
+2022-01-13T01:35:32.960456+00:00 heroku[web.1]: Restarting
+2022-01-13T01:35:33.009763+00:00 heroku[web.1]: State changed from up to starting
+2022-01-13T01:35:33.836414+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2022-01-13T01:35:34.052334+00:00 heroku[web.1]: Process exited with status 143
+2022-01-13T01:35:35.498450+00:00 heroku[web.1]: Starting process with command `npm start`
+2022-01-13T01:35:36.351772+00:00 app[web.1]: 
+2022-01-13T01:35:36.351785+00:00 app[web.1]: > SERVER_CONS_Meeting_Education@1.0.0 start /app
+2022-01-13T01:35:36.351785+00:00 app[web.1]: > node ./src/index.js
+2022-01-13T01:35:36.351786+00:00 app[web.1]: 
+2022-01-13T01:35:39.113137+00:00 app[web.1]: Successful Connection!
+2022-01-13T01:35:39.114422+00:00 app[web.1]: Server is started! - http://localhost:44594
+2022-01-13T01:35:39.240440+00:00 heroku[web.1]: State changed from starting to up
+2022-01-13T01:36:09.991472+00:00 heroku[router]: at=info method=OPTIONS path="/create" host=cons-meeting-education.herokuapp.com request_id=a3022846-8787-4fee-9ba4-3f470891be8e fwd="171.251.232.93" dyno=web.1 connect=0ms service=6ms status=204 bytes=301 protocol=https
+2022-01-13T01:36:10.257943+00:00 app[web.1]: 2022-01-12T18:36:00.000Z
+2022-01-13T01:36:10.258003+00:00 app[web.1]: 2022-01-13T01:36:00.000Z
+2022-01-13T01:36:11.409775+00:00 app[web.1]: Calendar event successfully created! {
+2022-01-13T01:36:11.409786+00:00 app[web.1]: kind: 'calendar#event',
+2022-01-13T01:36:11.409787+00:00 app[web.1]: etag: '"3284075541171000"',
+2022-01-13T01:36:11.409787+00:00 app[web.1]: id: 'tcu0qa44l2ui105lk80bqtc17s',
+2022-01-13T01:36:11.409787+00:00 app[web.1]: status: 'confirmed',
+2022-01-13T01:36:11.409788+00:00 app[web.1]: htmlLink: 'https://www.google.com/calendar/event?eid=dGN1MHFhNDRsMnVpMTA1bGs4MGJxdGMxN3MgNmlqYWpmbHVzdjJmdTVqMGt1OWhxcXMyNWdAZw',
+2022-01-13T01:36:11.409788+00:00 app[web.1]: created: '2022-01-13T01:36:10.000Z',
+2022-01-13T01:36:11.409789+00:00 app[web.1]: updated: '2022-01-13T01:36:10.644Z',
+2022-01-13T01:36:11.409789+00:00 app[web.1]: summary: 'Tin học - Nhóm 1',
+2022-01-13T01:36:11.409789+00:00 app[web.1]: description: 'Phòng thảo luận nhóm.',
+2022-01-13T01:36:11.409789+00:00 app[web.1]: location: 'Chỗ học',
+2022-01-13T01:36:11.409790+00:00 app[web.1]: colorId: '3',
+2022-01-13T01:36:11.409791+00:00 app[web.1]: creator: { email: 'thptnhs.12a12@gmail.com' },
+2022-01-13T01:36:11.409791+00:00 app[web.1]: organizer: {
+2022-01-13T01:36:11.409792+00:00 app[web.1]: email: '6ijajflusv2fu5j0ku9hqqs25g@group.calendar.google.com',
+2022-01-13T01:36:11.409792+00:00 app[web.1]: displayName: 'CONS Meeting Education',
+2022-01-13T01:36:11.409792+00:00 app[web.1]: self: true
+2022-01-13T01:36:11.409792+00:00 app[web.1]: },
+2022-01-13T01:36:11.409793+00:00 app[web.1]: start: { dateTime: '2022-01-13T08:36:00+07:00', timeZone: 'GMT+07:00' },
+2022-01-13T01:36:11.409793+00:00 app[web.1]: end: { dateTime: '2022-01-13T08:39:00+07:00', timeZone: 'GMT+07:00' },
+2022-01-13T01:36:11.409793+00:00 app[web.1]: iCalUID: 'tcu0qa44l2ui105lk80bqtc17s@google.com',
+2022-01-13T01:36:11.409793+00:00 app[web.1]: sequence: 0,
+2022-01-13T01:36:11.409793+00:00 app[web.1]: attendees: [
+2022-01-13T01:36:11.409794+00:00 app[web.1]: { email: 'tranvanconkg@gmail.com', responseStatus: 'needsAction' }
+2022-01-13T01:36:11.409794+00:00 app[web.1]: ],
+2022-01-13T01:36:11.409794+00:00 app[web.1]: hangoutLink: 'https://meet.google.com/ynr-jmmd-pfk',
+2022-01-13T01:36:11.409794+00:00 app[web.1]: conferenceData: {
+2022-01-13T01:36:11.409794+00:00 app[web.1]: createRequest: {
+2022-01-13T01:36:11.409795+00:00 app[web.1]: requestId: 'random string',
+2022-01-13T01:36:11.409795+00:00 app[web.1]: conferenceSolutionKey: [Object],
+2022-01-13T01:36:11.409795+00:00 app[web.1]: status: [Object]
+2022-01-13T01:36:11.409795+00:00 app[web.1]: },
+2022-01-13T01:36:11.409795+00:00 app[web.1]: entryPoints: [ [Object] ],
+2022-01-13T01:36:11.409796+00:00 app[web.1]: conferenceSolution: {
+2022-01-13T01:36:11.409796+00:00 app[web.1]: key: [Object],
+2022-01-13T01:36:11.409796+00:00 app[web.1]: name: 'Google Meet',
+2022-01-13T01:36:11.409797+00:00 app[web.1]: iconUri: 'https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v6/web-512dp/logo_meet_2020q4_color_2x_web_512dp.png'
+2022-01-13T01:36:11.409797+00:00 app[web.1]: },
+2022-01-13T01:36:11.409797+00:00 app[web.1]: conferenceId: 'ynr-jmmd-pfk',
+2022-01-13T01:36:11.409798+00:00 app[web.1]: signature: 'AGirE/I53EMN5/jyDyyz04T16Lir'
+2022-01-13T01:36:11.409798+00:00 app[web.1]: },
+2022-01-13T01:36:11.409798+00:00 app[web.1]: guestsCanInviteOthers: false,
+2022-01-13T01:36:11.409798+00:00 app[web.1]: reminders: { useDefault: false, overrides: [ [Object] ] },
+2022-01-13T01:36:11.409798+00:00 app[web.1]: eventType: 'default'
+2022-01-13T01:36:11.409798+00:00 app[web.1]: }
+2022-01-13T01:36:11.411158+00:00 heroku[router]: at=info method=POST path="/create" host=cons-meeting-education.herokuapp.com request_id=91ceed5b-5f23-4017-a7fc-32a4af53659a fwd="171.251.232.93" dyno=web.1 connect=0ms service=1165ms status=200 bytes=455 protocol=https
+2022-01-13T01:36:23.567433+00:00 heroku[router]: at=info method=OPTIONS path="/manager/join/61df5cc05d432b420ff1ba6a" host=cons-meeting-education.herokuapp.com request_id=9c275608-8a55-4fd2-8d25-f874feddfeae fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=204 bytes=301 protocol=https
+2022-01-13T01:36:24.068095+00:00 heroku[router]: at=info method=PATCH path="/manager/join/61df5cc05d432b420ff1ba6a" host=cons-meeting-education.herokuapp.com request_id=4e85e1b7-b9eb-4485-9d76-3d1d61de4409 fwd="171.251.232.93" dyno=web.1 connect=0ms service=247ms status=200 bytes=358 protocol=https
+2022-01-13T01:36:44.563491+00:00 heroku[router]: at=info method=OPTIONS path="/delete" host=cons-meeting-education.herokuapp.com request_id=50330b72-30a7-4f35-bc98-73d275163293 fwd="171.251.232.93" dyno=web.1 connect=0ms service=2ms status=204 bytes=301 protocol=https
+2022-01-13T01:36:45.319713+00:00 app[web.1]: Delete success!
+2022-01-13T01:36:45.321237+00:00 heroku[router]: at=info method=DELETE path="/delete" host=cons-meeting-education.herokuapp.com request_id=9fb58b3f-e4d7-42a6-938c-bc6198303cda fwd="171.251.232.93" dyno=web.1 connect=0ms service=503ms status=200 bytes=255 protocol=https
+2022-01-13T01:40:19.172488+00:00 heroku[router]: at=info method=OPTIONS path="/manager/join/61db7e9003d193dbfe3f3273" host=cons-meeting-education.herokuapp.com request_id=23cc71ff-18ca-4deb-af85-98822d57b4d1 fwd="116.109.84.25" dyno=web.1 connect=0ms service=1ms status=204 bytes=301 protocol=https
+2022-01-13T01:40:19.653950+00:00 heroku[router]: at=info method=PATCH path="/manager/join/61db7e9003d193dbfe3f3273" host=cons-meeting-education.herokuapp.com request_id=35b51f32-8fd7-4c3c-899e-68a6cffc013d fwd="116.109.84.25" dyno=web.1 connect=0ms service=223ms status=200 bytes=358 protocol=https
+2022-01-13T01:40:36.799076+00:00 heroku[router]: at=info method=OPTIONS path="/manager/join/61db7e9003d193dbfe3f3273" host=cons-meeting-education.herokuapp.com request_id=f252fc8f-1071-4aac-8c6e-0eb324d31a08 fwd="116.109.84.25" dyno=web.1 connect=0ms service=1ms status=204 bytes=301 protocol=https
+2022-01-13T01:40:37.336057+00:00 heroku[router]: at=info method=PATCH path="/manager/join/61db7e9003d193dbfe3f3273" host=cons-meeting-education.herokuapp.com request_id=9460a15e-5dc6-47c0-bc5e-7cff1848c782 fwd="116.109.84.25" dyno=web.1 connect=0ms service=221ms status=200 bytes=358 protocol=https
+2022-01-13T01:40:49.606151+00:00 heroku[router]: at=info method=OPTIONS path="/manager/join/61db7e9003d193dbfe3f3273" host=cons-meeting-education.herokuapp.com request_id=eec97135-e862-4e38-a3fd-2d4245597560 fwd="116.109.84.25" dyno=web.1 connect=0ms service=1ms status=204 bytes=301 protocol=https
+2022-01-13T01:40:50.078268+00:00 heroku[router]: at=info method=PATCH path="/manager/join/61db7e9003d193dbfe3f3273" host=cons-meeting-education.herokuapp.com request_id=a114fcaf-dae5-43d9-9225-9e4b7094c29e fwd="116.109.84.25" dyno=web.1 connect=0ms service=222ms status=200 bytes=358 protocol=https
+2022-01-13T01:51:12.624917+00:00 heroku[router]: at=info method=GET path="/?zarsrc=31&utm_source=zalo&utm_medium=zalo&utm_campaign=zalo&gidzl=3zuoQylMPZG4npPbnyfdCGZ3C63HnM8p5iXbCe36PJ14ppDZYfCtPnoPCZQFn6GmJyncP3RtFs5doT1XF0" host=cons-meeting-education.herokuapp.com request_id=52259237-1ddd-46fb-b4ae-2a4bcf2708d1 fwd="103.249.23.120" dyno=web.1 connect=0ms service=16ms status=200 bytes=2158 protocol=https
+2022-01-13T01:51:13.485322+00:00 heroku[router]: at=info method=GET path="/static/css/common.css" host=cons-meeting-education.herokuapp.com request_id=fed148ef-3ce9-4e06-a860-5762b33d0c30 fwd="103.249.23.120" dyno=web.1 connect=0ms service=5ms status=200 bytes=651 protocol=https
+2022-01-13T01:51:13.903280+00:00 heroku[router]: at=info method=GET path="/static/css/homePage/homePage.css" host=cons-meeting-education.herokuapp.com request_id=4c1da172-4743-4908-a5cb-ea2528899111 fwd="103.249.23.120" dyno=web.1 connect=0ms service=2ms status=200 bytes=3868 protocol=https
+2022-01-13T01:51:13.925122+00:00 heroku[router]: at=info method=GET path="/static/js/common.js" host=cons-meeting-education.herokuapp.com request_id=f34d8bc4-0a5c-487a-82d3-bc1abd7eb89a fwd="103.249.23.120" dyno=web.1 connect=0ms service=1ms status=200 bytes=720 protocol=https
+2022-01-13T01:51:14.161013+00:00 heroku[router]: at=info method=GET path="/static/js/homePage/homePage.js" host=cons-meeting-education.herokuapp.com request_id=2e4ec365-d0c6-4436-bd89-b040dfe733b3 fwd="103.249.23.122" dyno=web.1 connect=0ms service=1ms status=200 bytes=816 protocol=https
+2022-01-13T01:51:14.287061+00:00 heroku[router]: at=info method=GET path="/static/img/project-img.png" host=cons-meeting-education.herokuapp.com request_id=5b1014f5-1907-4310-9415-f2d088e57761 fwd="103.249.23.108" dyno=web.1 connect=0ms service=2ms status=200 bytes=95331 protocol=https
+2022-01-13T01:51:16.078123+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=cons-meeting-education.herokuapp.com request_id=34abedcb-f02b-4d0e-ae29-e9459ad18c01 fwd="103.249.23.108" dyno=web.1 connect=0ms service=2ms status=404 bytes=426 protocol=https
+2022-01-13T01:57:03.573694+00:00 heroku[router]: at=info method=GET path="/" host=cons-meeting-education.herokuapp.com request_id=ce312aa1-afe3-4147-b784-e5824caa8c2c fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=183 protocol=https
+2022-01-13T01:57:03.912675+00:00 heroku[router]: at=info method=GET path="/static/css/common.css" host=cons-meeting-education.herokuapp.com request_id=672bc13e-9671-4323-bca5-2ab6165f9bf7 fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T01:57:03.916631+00:00 heroku[router]: at=info method=GET path="/static/js/common.js" host=cons-meeting-education.herokuapp.com request_id=76b0cb27-fccf-49a5-835c-73b01b1e476b fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T01:57:04.175184+00:00 heroku[router]: at=info method=GET path="/static/img/project-img.png" host=cons-meeting-education.herokuapp.com request_id=840987d6-db1f-4aac-9b63-877e8a73135e fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=239 protocol=https
+2022-01-13T01:57:04.156325+00:00 heroku[router]: at=info method=GET path="/static/css/homePage/homePage.css" host=cons-meeting-education.herokuapp.com request_id=92ba6693-906d-455a-bab8-1c1ecf4c7fac fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T01:57:04.425330+00:00 heroku[router]: at=info method=GET path="/static/js/common.js" host=cons-meeting-education.herokuapp.com request_id=df3e54c2-ea82-4162-b1bf-7d7c2ddc7f42 fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T01:57:04.401743+00:00 heroku[router]: at=info method=GET path="/static/js/homePage/homePage.js" host=cons-meeting-education.herokuapp.com request_id=49b909fc-1415-41c7-950c-3b91780ccc73 fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T01:57:04.425460+00:00 heroku[router]: at=info method=GET path="/static/css/common.css" host=cons-meeting-education.herokuapp.com request_id=e1c24a51-2655-48b4-9e94-f781e08f9cda fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T01:57:04.434312+00:00 heroku[router]: at=info method=GET path="/static/css/homePage/homePage.css" host=cons-meeting-education.herokuapp.com request_id=e102f9d2-e0b4-4b6b-9656-cd2489a5ea8a fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T01:57:18.442335+00:00 heroku[router]: at=info method=GET path="/download" host=cons-meeting-education.herokuapp.com request_id=cbd03b05-73bb-499f-a3b8-c1a2ab12ba29 fwd="171.251.232.93" dyno=web.1 connect=0ms service=3ms status=304 bytes=271 protocol=https
+2022-01-13T02:18:11.006296+00:00 heroku[router]: at=info method=GET path="/" host=cons-meeting-education.herokuapp.com request_id=628c0229-ff53-4266-806a-4a4892475780 fwd="171.251.232.93" dyno=web.1 connect=0ms service=2ms status=304 bytes=183 protocol=https
+2022-01-13T02:18:11.324347+00:00 heroku[router]: at=info method=GET path="/static/js/common.js" host=cons-meeting-education.herokuapp.com request_id=a3141a99-a204-4ef7-9135-91495ad819e3 fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T02:18:11.324948+00:00 heroku[router]: at=info method=GET path="/static/css/homePage/homePage.css" host=cons-meeting-education.herokuapp.com request_id=b3b1ea77-e7aa-4551-ad05-46469a0f84ce fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T02:18:11.585736+00:00 heroku[router]: at=info method=GET path="/static/js/homePage/homePage.js" host=cons-meeting-education.herokuapp.com request_id=322d16b6-2f5d-4292-8c6f-01aa8563d1aa fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T02:18:11.589313+00:00 heroku[router]: at=info method=GET path="/static/img/project-img.png" host=cons-meeting-education.herokuapp.com request_id=631b2ca9-675f-40d9-aba7-9b81e4b563cd fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=239 protocol=https
+2022-01-13T02:18:11.309481+00:00 heroku[router]: at=info method=GET path="/static/css/common.css" host=cons-meeting-education.herokuapp.com request_id=8f694a8c-9cfe-4283-b575-181579ed46fa fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T02:18:46.528575+00:00 heroku[router]: at=info method=GET path="/static/css/common.css" host=cons-meeting-education.herokuapp.com request_id=8e60f2b4-f1f2-426b-a74b-a7a6265c9d20 fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T02:18:46.831555+00:00 heroku[router]: at=info method=GET path="/static/img/project-img.png" host=cons-meeting-education.herokuapp.com request_id=fc5e7f11-e44d-4052-aa22-9e2ba09d2066 fwd="171.251.232.93" dyno=web.1 connect=0ms service=5ms status=304 bytes=239 protocol=https
+2022-01-13T02:18:46.826026+00:00 heroku[router]: at=info method=GET path="/static/js/homePage/homePage.js" host=cons-meeting-education.herokuapp.com request_id=073bb321-0e9c-4b10-b1ea-3433e1b1bf30 fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T02:18:46.229083+00:00 heroku[router]: at=info method=GET path="/" host=cons-meeting-education.herokuapp.com request_id=698e6b8d-1b57-481d-9691-288811ae902b fwd="171.251.232.93" dyno=web.1 connect=0ms service=2ms status=304 bytes=183 protocol=https
+2022-01-13T02:18:46.565919+00:00 heroku[router]: at=info method=GET path="/static/js/common.js" host=cons-meeting-education.herokuapp.com request_id=81da6fb3-d7cb-4448-86ea-b5f24d41bb52 fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T02:18:46.568433+00:00 heroku[router]: at=info method=GET path="/static/css/homePage/homePage.css" host=cons-meeting-education.herokuapp.com request_id=26767d1a-85ba-4054-b7b6-750d453a2487 fwd="171.251.232.93" dyno=web.1 connect=0ms service=1ms status=304 bytes=237 protocol=https
+2022-01-13T02:54:57.974477+00:00 heroku[web.1]: Idling
+2022-01-13T02:54:57.993133+00:00 heroku[web.1]: State changed from up to down
+2022-01-13T02:54:58.904018+00:00 heroku[web.1]: Process exited with status 143
+2022-01-13T02:54:58.657599+00:00 heroku[web.1]: Stopping all processes with SIGTERM
