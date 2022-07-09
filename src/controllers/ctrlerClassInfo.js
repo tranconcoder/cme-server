@@ -1,19 +1,23 @@
-const { ObjectId } = require("mongodb");
-const { v4: uuid } = require("uuid");
-const Joi = require("joi");
+const { ObjectId } = require('mongodb');
+const { v4: uuid } = require('uuid');
+const Joi = require('joi');
 
-const userDb = require("../resources/config/models/user");
-const classInfoDb = require("../resources/config/models/classInfo");
+const userDb = require('../resources/config/models/user');
+const classInfoDb = require('../resources/config/models/classInfo');
 
 const {
-	classInfoSocket: { emitChangeClassInfo, emitCreateClassInfo, emitDeleteClassInfo },
-} = require("../socket");
+	classInfoSocket: {
+		emitChangeClassInfo,
+		emitCreateClassInfo,
+		emitDeleteClassInfo,
+	},
+} = require('../socket');
 const {
 	requestClassInfoSchema,
 	requestCheckOnlineFormPassword,
 	requestChangeOnlineFormPassword,
 	requestCheckUniqueInfo,
-} = require("../joiSchema");
+} = require('../joiSchema');
 
 class ClassInfo {
 	async renderAddStudentForm(req, res) {
@@ -21,7 +25,7 @@ class ClassInfo {
 			const { googleId, classInfoId } = req.params;
 
 			if (classInfoId.length !== 24) {
-				throw [401, "classInfoId is invalid."];
+				throw [401, 'classInfoId is invalid.'];
 			}
 
 			const classInfo = await classInfoDb.findOne({
@@ -30,7 +34,7 @@ class ClassInfo {
 			});
 
 			if (!classInfo) {
-				throw [404, "Not found classInfo in DB."];
+				throw [404, 'Not found classInfo in DB.'];
 			}
 
 			const { onlineFormPassword } = classInfo;
@@ -51,30 +55,35 @@ class ClassInfo {
 				if (!classInfo.acceptNewRequest) {
 					throw [
 						401,
-						"<h1>Chủ biểu mẫu đã bật từ chối yêu cầu mới, vui lòng liên hệ nếu muốn tiếp tục nhập.</h1>",
+						'<h1>Chủ biểu mẫu đã bật từ chối yêu cầu mới, vui lòng liên hệ nếu muốn tiếp tục nhập.</h1>',
 					];
 				}
 
-				return res.render("addStudent/addStudent");
+				return res.render('addStudent/addStudent');
 			}
 
-			res.status(404).send("This link is invalid!");
+			res.status(404).send('This link is invalid!');
 		} catch ([code, message]) {
 			return res.status(code).send(message);
 		}
 	}
 
 	renderAddStudentSuccess(req, res) {
-		res.locals.onlineFormUrl = req.query.onlineFormUrl || "#";
+		res.locals.onlineFormUrl = req.query.onlineFormUrl || '#';
 
-		res.render("addStudent/addStudentSuccess");
+		res.render('addStudent/addStudentSuccess');
 	}
 
 	async addStudent(req, res) {
 		try {
 			// Validate request data
 			const {
-				value: { googleId, classInfoIdToAdd, studentInfoToAdd, passwordToAdd },
+				value: {
+					googleId,
+					classInfoIdToAdd,
+					studentInfoToAdd,
+					passwordToAdd,
+				},
 				error,
 			} = requestClassInfoSchema.validate(req.body);
 
@@ -87,19 +96,19 @@ class ClassInfo {
 			});
 
 			if (!classInfoToAdd) {
-				throw [404, "Not found classInfoToAdd in DB."];
+				throw [404, 'Not found classInfoToAdd in DB.'];
 			}
 
 			const { acceptNewRequest } = classInfoToAdd;
 
 			// Check state accept new request
 			if (!acceptNewRequest) {
-				throw [417, "This online form is disabled."];
+				throw [417, 'This online form is disabled.'];
 			}
 
 			// Password check
 			if (classInfoToAdd.onlineFormPassword !== passwordToAdd) {
-				throw [401, "Unauthorized."];
+				throw [401, 'Unauthorized.'];
 			}
 
 			const newStudentList = classInfoToAdd.studentList.filter(
@@ -187,7 +196,7 @@ class ClassInfo {
 				{ new: true }
 			)
 			.then(updatedClassInfo => {
-				if (!updatedClassInfo) throw "Not found classInfo in DB.";
+				if (!updatedClassInfo) throw 'Not found classInfo in DB.';
 
 				emitChangeClassInfo(googleId, {
 					...updatedClassInfo._doc,
@@ -213,7 +222,7 @@ class ClassInfo {
 			.findOne({ _id: classInfoId, googleId })
 			.then(classInfo => {
 				if (!classInfo) {
-					return res.status(404).send("Not found classInfo in Db.");
+					return res.status(404).send('Not found classInfo in Db.');
 				}
 
 				const { studentList } = classInfo;
@@ -221,15 +230,15 @@ class ClassInfo {
 
 				studentList.forEach(student => {
 					if (index && index === +student.index) {
-						infoFieldsNotUnique.push("index");
+						infoFieldsNotUnique.push('index');
 					}
 
 					if (googleName && googleName === student.googleName) {
-						infoFieldsNotUnique.push("googleName");
+						infoFieldsNotUnique.push('googleName');
 					}
 
 					if (email && email === student.email) {
-						infoFieldsNotUnique.push("email");
+						infoFieldsNotUnique.push('email');
 					}
 				});
 
@@ -243,14 +252,14 @@ class ClassInfo {
 		const { googleId } = req.jwtPayload;
 
 		if (!classInfoName) {
-			return res.status(401).send("Missing classInfoName");
+			return res.status(401).send('Missing classInfoName');
 		}
 
 		classInfoDb
 			.findOne({ googleId, classInfoName })
 			.then(classInfo => {
 				if (!classInfo) {
-					return res.status(404).send("Not found classInfo in DB.");
+					return res.status(404).send('Not found classInfo in DB.');
 				} else {
 					res.status(200).json(classInfo);
 				}
@@ -266,9 +275,13 @@ class ClassInfo {
 				if (allClassInfo.length === 0) {
 					// If not have classInfo -> created default classInfo
 					classInfoDb
-						.create({ googleId, classInfoName: "default" })
-						.then(createdClassInfo => res.status(201).json([createdClassInfo]))
-						.catch(errors => res.status(500).send(new Error(errors)));
+						.create({ googleId, classInfoName: 'default' })
+						.then(createdClassInfo =>
+							res.status(201).json([createdClassInfo])
+						)
+						.catch(errors =>
+							res.status(500).send(new Error(errors))
+						);
 				} else res.status(200).json(allClassInfo);
 			} else {
 				res.status(404).send("Can't not found any classInfo in DB.");
@@ -280,8 +293,12 @@ class ClassInfo {
 		const { googleId } = req.jwtPayload;
 		const { classInfoToAdd } = req.body;
 
-		if (!classInfoToAdd || !classInfoToAdd.classInfoName || !classInfoToAdd.studentList) {
-			return res.status(401).send("Missing credentials.");
+		if (
+			!classInfoToAdd ||
+			!classInfoToAdd.classInfoName ||
+			!classInfoToAdd.studentList
+		) {
+			return res.status(401).send('Missing credentials.');
 		}
 
 		const classInfoNameWasExisted = !!(await classInfoDb.findOne({
@@ -290,14 +307,14 @@ class ClassInfo {
 		}));
 
 		if (classInfoNameWasExisted) {
-			return res.status(409).send("This classInfoName was existed");
+			return res.status(409).send('This classInfoName was existed');
 		}
 
 		classInfoDb
 			.create({ ...classInfoToAdd, googleId })
 			.then(newClassInfo => {
 				if (!newClassInfo) {
-					return res.status(404).send("Not found created classInfo.");
+					return res.status(404).send('Not found created classInfo.');
 				}
 
 				emitCreateClassInfo(googleId, newClassInfo);
@@ -314,16 +331,22 @@ class ClassInfo {
 		const { classInfoNameToUpdate, newClassInfo } = req.body;
 
 		if (!classInfoNameToUpdate || !newClassInfo) {
-			return res.status(401).send("Missing credentials.");
+			return res.status(401).send('Missing credentials.');
 		}
 
 		classInfoDb
-			.findOneAndUpdate({ googleId, classInfoName: classInfoNameToUpdate }, newClassInfo, {
-				new: true,
-			})
+			.findOneAndUpdate(
+				{ googleId, classInfoName: classInfoNameToUpdate },
+				newClassInfo,
+				{
+					new: true,
+				}
+			)
 			.then(updatedClassInfo => {
 				if (!updatedClassInfo) {
-					return res.status(404).send("Not found updatedClassInfo in DB.");
+					return res
+						.status(404)
+						.send('Not found updatedClassInfo in DB.');
 				}
 
 				// Change class info name to old class info name
@@ -346,7 +369,9 @@ class ClassInfo {
 		const { classInfoNameToDelete } = req.query;
 
 		if (!classInfoNameToDelete) {
-			return res.status(401).send("Missing classInfoName in queryRequest.");
+			return res
+				.status(401)
+				.send('Missing classInfoName in queryRequest.');
 		}
 
 		classInfoDb
@@ -354,7 +379,7 @@ class ClassInfo {
 			.then(() => {
 				emitDeleteClassInfo(googleId, classInfoNameToDelete);
 
-				res.status(200).send("Deleted success.");
+				res.status(200).send('Deleted success.');
 			})
 			.catch(errors => {
 				res.status(500).send(new Error(errors));
